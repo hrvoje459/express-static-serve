@@ -1,0 +1,50 @@
+
+.shamir_holder{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	flex-wrap: wrap;
+	margin-top: 100px;
+	align-items: flex-start;
+}
+.shamir_holder > div{
+	margin: 0 auto 50px auto;
+	width: 40%;
+	min-width: 500px;
+}
+.button_holder {
+	width: 100%;
+}
+.moj_gumb{
+	margin: 10px 10px 10px 10px;
+	border-color: rgb(99, 99, 99);
+	border-width: 2px;
+}
+.input_holder{
+	margin-bottom: 10px;
+}
+.input_holder > *{
+	margin-right: 10px;
+}
+.overflow{
+	overflow-x: scroll;
+	white-space: nowrap;
+}
+.secret_input{
+	width: 70%;
+}
+/*
+.recover_secret{
+
+	display: flex;
+	flex-direction:  column;
+	width:45%;
+}
+
+
+/*.stack_vertically{
+	color:red;
+	display: flex;
+	flex-direction:  column;
+	width:45%;
+}*/

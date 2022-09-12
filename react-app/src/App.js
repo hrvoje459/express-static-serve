@@ -1,37 +1,23 @@
 import React from "react";
-import axios from "axios";
 import "./styles.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import ShareSecret from "./ShareSecret";
+import RecoverSecret from "./RecoverSecret";
 
 export default class App extends React.Component {
-  state = {
-    users: [],
-  };
-  componentDidMount() {
-    axios.get("/users.json").then((response) => {
-      this.setState({ users: response.data });
-    });
-  }
+	state = {
+		users: [],
+	};
 
-  render() {
-    const { users } = this.state;
-    return (
-      <div>
-        <ul className="users">
-          {users.map((user) => (
-            <li className="user">
-              <p>
-                <strong>Name:</strong> {user.name}
-              </p>
-              <p>
-                <strong>Email:</strong> {user.email}
-              </p>
-              <p>
-                <strong>City:</strong> {user.address.city}
-              </p>
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
+
+	render() {
+
+		return (
+			<div className="shamir_holder">
+				<ShareSecret></ShareSecret>
+				<RecoverSecret></RecoverSecret>
+			</div>
+		);
+	}
 }
